@@ -36,8 +36,8 @@ function App() {
 var numberOne = 0;
 var numberTwo = 3;
 var numberThree = 3;
-let oneScore ;
-let twoScore ;
+let oneScore = 0;
+let twoScore = 0;
 
 function play() {
   // run this loop until numberOne is different than numberThree
@@ -49,17 +49,17 @@ function play() {
     numberTwo = Math.floor(Math.random() * 3);
   } while (numberTwo === numberThree || numberTwo === numberOne);
 
-  if (numberOne === 0) {
+  if (numberOne == 0) {
     document.getElementById("one").innerHTML = "STONE";
-  } else if (numberOne === 1) {
+  } else if (numberOne == 1) {
     document.getElementById("one").innerHTML = "PAPER";
   } else {
     document.getElementById("one").innerHTML = "SCISSORS";
   }
 
-  if (numberTwo === 0) {
+  if (numberTwo == 0) {
     document.getElementById("two").innerHTML = "STONE";
-  } else if (numberTwo === 1) {
+  } else if (numberTwo == 1) {
     document.getElementById("two").innerHTML = "PAPER";
   } else {
     document.getElementById("two").innerHTML = "SCISSORS";
@@ -73,33 +73,33 @@ function play() {
 
 function getResult(numberOne, numberTwo) {
   //First Set
-  if (numberOne === 0 && numberTwo === 0) {
+  if (numberOne == 0 && numberTwo == 0) {
     oneScore = oneScore + 0
     twoScore = twoScore + 0
-  } else if (numberOne === 0 && numberTwo === 1) {
+  } else if (numberOne == 0 && numberTwo == 1) {
     twoScore = twoScore + 1
-  } else if (numberOne === 0 && numberTwo === 2) {
+  } else if (numberOne == 0 && numberTwo == 2) {
     oneScore = oneScore + 1
   }
 
 
   //Second Set
-  else if (numberOne === 1 && numberTwo === 0) {
+  else if (numberOne == 1 && numberTwo == 0) {
     oneScore = oneScore + 1
-  } else if (numberOne === 1 && numberTwo === 1) {
+  } else if (numberOne == 1 && numberTwo == 1) {
     oneScore = oneScore + 0
     twoScore = twoScore + 0
-  } else if (numberOne === 1 && numberTwo === 2) {
+  } else if (numberOne == 1 && numberTwo == 2) {
     twoScore = twoScore + 1
   }
 
 
   //Third set
-  else if (numberOne === 2 && numberTwo === 0) {
+  else if (numberOne == 2 && numberTwo == 0) {
     twoScore = twoScore + 1
-  } else if (numberOne === 2 && numberTwo === 1) {
+  } else if (numberOne == 2 && numberTwo == 1) {
     oneScore = oneScore + 1
-  } else if (numberOne === 2 && numberTwo === 2) {
+  } else if (numberOne == 2 && numberTwo == 2) {
     oneScore = oneScore + 0
     twoScore = twoScore + 0
   }
@@ -110,10 +110,10 @@ function getResult(numberOne, numberTwo) {
     return (oneScore, twoScore)
   }
 
-  if (oneScore === 10) {
+  if (oneScore == 10) {
     alert('Player one wins !!')
 
-  } else if (twoScore === 10) {
+  } else if (twoScore == 10) {
     alert('Player two wins !!')
   }
 
